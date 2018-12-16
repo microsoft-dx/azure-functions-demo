@@ -11,7 +11,7 @@ namespace AzureFunctionAppDemo
     public static class HelloWorld
     {
         [FunctionName("HelloWorld")]
-        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "api/HelloWorld/{name}")]HttpRequestMessage req,
+        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "api/HttpTriggerCSharp/HelloWorld/{name}")]HttpRequestMessage req,
             string name, TraceWriter log)
         {
             log.Info("C# HTTP trigger function processed a request.");
