@@ -44,6 +44,7 @@ namespace AzureFunctionAppDemo
             if (publishedTweet == null)
             {
                 log.Error($"Failed to publish tweet. Sad! {tweetText}");
+                throw new Exception($"Failed to publish tweet. Sad! {tweetText}");
             }
             else
             {
